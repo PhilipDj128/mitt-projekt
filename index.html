@@ -3,48 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hej Philip!</title>
+  <title>Välkommen till mitt projekt</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: "Segoe UI", sans-serif;
-      background-color: #111;
-      color: white;
-      text-align: center;
+      background: linear-gradient(to right, #f0f0f0, #e6e6e6);
+      color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      text-align: center;
     }
 
     h1 {
       font-size: 3em;
       margin-bottom: 0.2em;
-      color: #00ffd0;
+      color: #007acc;
     }
 
     p {
       font-size: 1.2em;
       max-width: 600px;
-      margin-bottom: 2em;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+      line-height: 1.5em;
     }
 
     .btn {
       margin-top: 30px;
       padding: 12px 24px;
       font-size: 1em;
-      color: #1c1c1c;
-      background-color: #00ffcc;
+      color: white;
+      background-color: #007acc;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -52,14 +44,23 @@
     }
 
     .btn:hover {
-      background-color: #00ccb3;
+      background-color: #005a99;
+    }
+
+    img {
+      margin-top: 40px;
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <h1>Hej Philip!</h1>
-  <p>Välkommen till din första HTML-sida!<br>Du är igång med VS Code och GitHub 🔥</p>
-  
-  <img src="bild.jpg" alt="Vacker vy" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 30px;" />
+  <h1>🚀 Välkommen!</h1>
+  <p>Det här är min första hemsida – skapad med Visual Studio Code och publicerad via GitHub Pages. Mer kommer snart!</p>
+  <button class="btn" onclick="alert('Mer innehåll är på väg!')">Läs mer</button>
+
+  <img src="bild.jpg" alt="Min bild" />
 </body>
 </html>
