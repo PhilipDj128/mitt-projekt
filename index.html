@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
-  <title>Hej Philip!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philip de Jager</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: brightness(0.4);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background-color: #00ffcc;
+      border: none;
+      color: #111;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .btn:hover {
+      background-color: #00ccb3;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <h1>Välkommen till din första HTML-sida!</h1>
-  <p>Du är igång med VS Code och GitHub 🔥</p>
+  <h1>🚀 Välkommen till min sida!</h1>
+  <p>Jag heter Philip de Jager och detta är min första publicerade webbsida. Den här är bara början – mer kommer snart.</p>
+  <button class="btn" onclick="alert('Tack för att du klickade – mer kommer!')">Läs mer</button>
 </body>
 </html>
