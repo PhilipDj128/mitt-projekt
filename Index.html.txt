@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hej Philip!</title>
+</head>
+<body>
+  <h1>Välkommen till din första HTML-sida!</h1>
+  <p>Du är igång med VS Code och GitHub 🔥</p>
+</body>
+</html>
