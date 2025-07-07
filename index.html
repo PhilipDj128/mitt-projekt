@@ -3,67 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Philip de Jager</title>
+  <title>Hej Philip!</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
       font-family: "Segoe UI", sans-serif;
-      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #111;
       color: white;
-      height: 100vh;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      backdrop-filter: brightness(0.4);
+      justify-content: center;
+      min-height: 100vh;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      animation: fadeIn 1s ease forwards;
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      color: #00ffd0;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.2em;
       max-width: 600px;
-      margin-bottom: 2rem;
-      animation: fadeIn 1.5s ease forwards;
+      margin-bottom: 2em;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
     }
 
     .btn {
-      padding: 12px 30px;
-      font-size: 1rem;
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1em;
+      color: #1c1c1c;
       background-color: #00ffcc;
       border: none;
-      color: #111;
       border-radius: 5px;
       cursor: pointer;
-      transition: 0.3s ease;
-      animation: fadeIn 2s ease forwards;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
       background-color: #00ccb3;
-      transform: scale(1.05);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>🚀 Välkommen till min sida!</h1>
-  <p>Jag heter Philip de Jager och detta är min första publicerade webbsida. Den här är bara början – mer kommer snart.</p>
-  <button class="btn" onclick="alert('Tack för att du klickade – mer kommer!')">Läs mer</button>
+  <h1>🌍 Hej Philip!</h1>
+  <p>Det här är en vacker startsida med bild och stil – publicerad med GitHub Pages!</p>
+  <img src="bild.jpg" alt="Vacker utsikt" />
+  <button class="btn" onclick="alert('Tack för att du besöker sidan!')">Tryck här</button>
 </body>
 </html>
