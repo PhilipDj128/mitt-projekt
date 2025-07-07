@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mitt universum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philip – Framtidens Portal</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      color: white;
+    }
+    body {
       background: url('A_3D-rendered_digital_image_showcases_a_personal_w.png') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-shadow: 1px 1px 4px #000;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2em;
     }
-
     h1 {
-      font-size: 3em;
-      margin: 0;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
       background: rgba(0, 0, 0, 0.5);
       padding: 10px 20px;
       border-radius: 10px;
     }
-
     p {
       font-size: 1.2em;
       max-width: 600px;
       background: rgba(0, 0, 0, 0.4);
       padding: 15px;
       border-radius: 10px;
-      margin-top: 20px;
+      margin-top: 1em;
     }
-
     .btn {
       margin-top: 30px;
       padding: 12px 24px;
@@ -48,16 +55,76 @@
       transition: 0.3s;
       color: #000;
       font-weight: bold;
+      box-shadow: 0 0 15px #00ffcc;
     }
-
     .btn:hover {
       background-color: #00ccb3;
+      box-shadow: 0 0 30px #00ffcc;
+      transform: scale(1.05);
+    }
+    #stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
     }
   </style>
 </head>
 <body>
-  <h1>🌌 Välkommen till mitt universum</h1>
-  <p>Det här är inte bara en hemsida – det är en portal till något större. Upplev, känn och inspireras.</p>
-  <button class="btn" onclick="alert('Det bästa har inte ens börjat ännu.')">Utforska</button>
+  <canvas id="stars"></canvas>
+
+  <h1 id="typewriter"></h1>
+  <p>Det här är din portal till framtiden. Inspirerande, personlig och oförglömlig.</p>
+  <button class="btn" onclick="alert('Det bästa har inte ens börjat.')">Upplev mer</button>
+
+  <script>
+    const text = "🌠 Välkommen till framtiden, Philip.";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 75);
+      }
+    }
+    type();
+
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    let stars = [];
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      stars = [];
+      for (let i = 0; i < 100; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    window.addEventListener("resize", resize);
+    resize();
+    animate();
+  </script>
 </body>
 </html>
